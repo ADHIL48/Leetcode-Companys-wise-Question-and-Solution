@@ -1,0 +1,26 @@
+package com.fishercoder.thirdthousand;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import com.fishercoder.solutions.thirdthousand._2544;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class _2544Test {
+    private _2544.Solution1 solution1;
+
+    @BeforeEach
+    public void setup() {
+        solution1 = new _2544.Solution1();
+    }
+
+    @Test
+    public void test1() {
+        assertEquals(4, solution1.alternateDigitSum(521));
+    }
+
+    @Test
+    public void test2() {
+        assertEquals(1, solution1.alternateDigitSum(10));
+    }
+}
