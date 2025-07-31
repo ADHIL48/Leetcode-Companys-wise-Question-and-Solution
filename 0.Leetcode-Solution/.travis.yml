@@ -1,0 +1,22 @@
+language: java
+
+jdk:
+  - openjdk10
+
+before_script:
+- chmod a+x gradlew
+
+node_js: "v13.7.0"
+install: "npm install && npm install standard --global"
+
+script: ./gradlew clean build && standard javascript/*
+
+notifications:
+  email:
+    recipients:
+      - fishercoder@gmail.com
+    on_failure: always
+
+branches:
+  only:
+    - master
